@@ -22,3 +22,12 @@ MAIN PROC
     MOV BX, 8
     DIV BX
     ; Divide result by 8 using DIV
+
+    MOV ARRAY[2], AX
+    ; Store quotient back into second element
+
+    MOV AH, 4CH  ; Instructions used to terminate 
+    INT 21H  ; Calls DOC to execute the program
+
+MAIN ENDP
+END MAIN
